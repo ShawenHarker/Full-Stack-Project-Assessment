@@ -21,3 +21,12 @@ li {
   padding: 1em;
   margin: 1em auto;
 }
+
+.btn {
+  border: none;
+}
+
+.thumb {
+  font-size: medium;
+  color: red;
+}
