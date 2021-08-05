@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 360px;
+  max-width: 90%;
+}
+
+.card-display {
+  padding: 1em;
+  margin: 1em auto;
 }
