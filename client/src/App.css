@@ -30,3 +30,8 @@ li {
   font-size: medium;
   color: red;
 }
+
+.delete {
+  background-color: red;
+  color: white;
+}
