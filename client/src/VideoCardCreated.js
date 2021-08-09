@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Data from "./Data/exampleresponse.json";
 import "./App.css";
+import NewVideoInput from "./NewVideoInput";
 
 const VideoCardCreated = () => {
   let [countPlusOne, setCountPlusOne] = useState();
@@ -13,6 +14,7 @@ const VideoCardCreated = () => {
 
   return (
     <div>
+      <NewVideoInput />
       <div>
         {Data.map((data, index) => (
           <div key={index} className="container card card-display">
