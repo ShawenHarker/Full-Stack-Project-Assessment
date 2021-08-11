@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const VideoCardCreated = ({ Data }) => {
+const VideoCardCreated = ({ Data, setData }) => {
 
   return (
     <div>

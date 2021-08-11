@@ -2,9 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const PostNewVideo = ({ Data, setData }) => {
-  const { register, watch, handleSubmit } = useForm("");
+  const preloadedValues = "";
+  const { register, reset, handleSubmit } = useForm({
+    defaultValues: preloadedValues,
+  });
 
-   const watchAllFields = watch("title", "url");
   const onSubmit = (event) => {
     
     let newVideo = {
@@ -14,6 +16,7 @@ const PostNewVideo = ({ Data, setData }) => {
       rating: 0,
     };
     setData([...Data, newVideo]);
+    reset();
   };
 
   return (
