@@ -4,15 +4,22 @@ const NewVideoInput = () => {
     return (
       <div>
         <form>
-          <div>
-            <label for="title">What's The Video Title</label>
-            <input type="text" name="title" id="title" value="title" />
+          <div className="form-wrapper">
+            <div className="form-group">
+              <label htmlFor="title">Add Your Video Title Here</label>
+              <input
+                type="text"
+                className="form-control"
+                name="title"
+                id="title"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="url">Paste Your YouTube URL Here</label>
+              <input type="text" className="form-control" name="url" id="url" />
+            </div>
           </div>
-          <div>
-            <label for="url">Paste Your URL Here</label>
-            <input type="text" name="url" id="url" value="url" />
-          </div>
-          <button>Submit</button>
+          <button className="btn delete">Submit</button>
         </form>
       </div>
     );
