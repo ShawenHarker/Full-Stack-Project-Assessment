@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 
-const VideoCardCreated = ({ Data, setData }) => {
+const VideoCardCreated = ({ Data }) => {
 
   return (
     <div>
-      {Data.map((data, index) => (
+      {Data && Data.map((data, index) => (
         <div key={index} className="container card card-display">
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${data.url.replace(
