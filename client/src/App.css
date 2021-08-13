@@ -34,6 +34,10 @@ li {
   width: 330px;
 }
 
+.search {
+  margin: 1em;
+}
+
 .card-display {
   padding: 1em;
   margin: 1em auto;

@@ -5,8 +5,8 @@ const VideoCardCreated = ({ Data }) => {
 
   return (
     <div>
-      {Data && Data.map((data, index) => (
-        <div key={index} className="container card card-display">
+      {Data && Data.map((data) => (
+        <div key={data.id} className="container card card-display">
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${data.url.replace(
               "https://www.youtube.com/watch?v=",
