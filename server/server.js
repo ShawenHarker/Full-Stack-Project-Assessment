@@ -3,10 +3,23 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const { Pool } = require("pg");
+const pool = new Pool({
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATA,
+  password: process.env.PASSWORD,
+  port: process.env.POSTHOST,
+});
+
 const cors = require("cors");
 app.use(cors());
 
-const videos = require("../client/src/Data/exampleresponse.json");
+const videos = app.get("/videos_recommendation", (req, res) => {
+  pool.query("SELECT * FROM video_recommendation", (error, result) => {
+    res.json(result.rows);
+  });
+});
 
 app.get("/", (req, res) => res.json(videos));
 
