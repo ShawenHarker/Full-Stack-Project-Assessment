@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  font-display: optional;
 }
 
 li {
@@ -38,7 +39,7 @@ li {
   margin: 1em;
 }
 
-.card-display {
+.card {
   padding: 1em;
   margin: 1em auto;
 }
@@ -48,11 +49,18 @@ li {
 }
 
 .thumb {
-  font-size: medium;
+  font-size: 1.5rem;
   color: red;
 }
 
-.delete {
-  background-color: red;
-  color: white;
+.submit {
+  border: solid 2px red;
+  color: red;
+  font-weight: bolder;
+}
+
+.rating-section-styling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

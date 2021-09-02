@@ -18,10 +18,11 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <AddNewVideo />
-        {videoData && videoData.map(videoItem => {
-          return <CreateVideoCard key={videoItem.id} video={videoItem} />
-        })}
+        <AddNewVideo Data={videoData} setData={setVideoData} />
+        {videoData &&
+          videoData.map((videoItem) => {
+            return <CreateVideoCard key={videoItem.id} video={videoItem} />;
+          })}
       </div>
     </div>
   );

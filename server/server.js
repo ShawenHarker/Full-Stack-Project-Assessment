@@ -20,13 +20,6 @@ const pool = new Pool({
 const cors = require("cors");
 app.use(cors());
 
-// app.get("/hotels", function (req, res) {
-//   pool
-//     .query("SELECT * FROM hotels")
-//     .then((result) => res.json(result.rows))
-//     .catch((e) => console.error(e));
-// });
-
 app.get("/video_data", (req, res) => {
   pool
   .query("SELECT * FROM video_recommendation")

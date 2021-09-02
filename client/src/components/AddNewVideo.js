@@ -36,7 +36,7 @@ const AddNewVideo = ({ Data, setData }) => {
             <input type="text" className="form-size-control" {...register("url")} />
           </div>
         </div>
-        <button className="btn delete">Submit</button>
+        <button className="btn submit">Submit</button>
       </form>
     </div>
   );
