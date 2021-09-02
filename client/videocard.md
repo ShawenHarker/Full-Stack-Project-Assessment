@@ -1,11 +1,4 @@
-import React from "react";
-import "./App.css";
-
-const VideoCardCreated = ({ Data }) => {
-
-  return (
-    <div>
-      {Data && Data.map((data) => (
+{Data && Data.map((data) => (
         <div key={data.id} className="container card card-display">
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${data.url.replace(
@@ -32,8 +25,3 @@ const VideoCardCreated = ({ Data }) => {
           </button>
         </div>
       ))}
-    </div>
-  );
-};
-
-export default VideoCardCreated;

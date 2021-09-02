@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import AddNewVideo from "./components/AddNewVideo";
+import CreateVideoCard from "./components/CreateVideoCard";
+
 import "./App.css";
-import Header from "./Header";
-import PostNewVideo from "./PostNewVideo";
-import SearchBar from "./SearchBar";
-import VideoCardCreated from "./VideoCardCreated";
 
 function App() {
-  const [data, setData] = useState();
+  const [videoData, setVideoData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/video_recommendation")
+    fetch("http://localhost:5000/video_data")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setVideoData(data));
   }, []);
 
   return (
     <div className="App">
       <Header />
-      <PostNewVideo Data={data} setData={setData} />
-      <SearchBar />
-      <VideoCardCreated Data={data} setData={setData} />
+      <div className="container">
+        <AddNewVideo />
+        {videoData && videoData.map(videoItem => {
+          return <CreateVideoCard key={videoItem.id} video={videoItem} />
+        })}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const PostNewVideo = ({ Data, setData }) => {
+const AddNewVideo = ({ Data, setData }) => {
   const preloadedValues = "";
   const { register, reset, handleSubmit } = useForm({
     defaultValues: preloadedValues,
@@ -27,13 +27,13 @@ const PostNewVideo = ({ Data, setData }) => {
             <label htmlFor="title">Add Your Video Title Here</label>
             <input
               type="text"
-              className="form-control"
+              className="form-size-control"
               {...register("title")}
             />
           </div>
           <div className="form-group">
             <label htmlFor="url">Paste Your YouTube URL Here</label>
-            <input type="text" className="form-control" {...register("url")} />
+            <input type="text" className="form-size-control" {...register("url")} />
           </div>
         </div>
         <button className="btn delete">Submit</button>
@@ -42,4 +42,4 @@ const PostNewVideo = ({ Data, setData }) => {
   );
 };
 
-export default PostNewVideo;
+export default AddNewVideo;
